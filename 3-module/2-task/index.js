@@ -1,9 +1,6 @@
 function filterRange(arr, a, b) {
-  let cloneOfArr = arr.slice();
-  for (let i = 0; i < cloneOfArr.length; i++) {
-    if (cloneOfArr[i] < a || cloneOfArr[i] > b) {
-      cloneOfArr.splice(i, 1);
-    }
-  }
+  let cloneOfArr = arr.filter((element) => {
+    return element >= a && element <= b;
+  });
   return cloneOfArr;
 }
