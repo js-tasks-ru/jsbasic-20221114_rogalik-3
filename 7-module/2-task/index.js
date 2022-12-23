@@ -33,13 +33,11 @@ export default class Modal {
   constructor() {
     this.#modalWindow.addEventListener("click", (e) => {
       if (!e.target.closest(".modal__close")) return;
-      this.#body.classList.remove("is-modal-open");
-      document.querySelector(".modal").parentElement.remove();
+      this.close();
     })
     document.addEventListener("keydown", (e) => {
       if (!(e.code === "Escape")) return;
-      this.#body.classList.remove("is-modal-open");
-      this.#modalWindow.querySelector(".modal").parentElement.remove();
+      this.close();
     })
   }
 
