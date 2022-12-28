@@ -27,7 +27,7 @@ export default class ProductCard {
             card.querySelector(".card__image").src += `${product[key]}`;
         }
     }
-    card.querySelector(".card__button").addEventListener("click", (event) => {
+    card.querySelector(".card__button").addEventListener("click", () => {
         card.dispatchEvent(new CustomEvent("product-add", { 
             detail: product.id, 
             bubbles: true 
